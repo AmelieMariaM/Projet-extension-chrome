@@ -3,7 +3,7 @@ body {
 }
 @font-face {
   font-family: "Super Dream";
-  src: url("Super\ Dream.ttf") format("truetype");
+  src: url("./assets/Super\ Dream.ttf") format("truetype");
 }
 
 .mainContainer {
@@ -26,10 +26,8 @@ body {
 }
 
 #imageContainer {
-
   border-radius: 10px;
   margin: 20px auto;
-
 }
 
 #citationContainer {
@@ -44,14 +42,9 @@ body {
   line-height: 30px;
 }
 
-
-
 audio::-webkit-media-controls-panel {
   background-color: #f1e8e8e7; /* Changer la couleur du panneau de contrôle sur les navigateurs WebKit (comme Chrome et Safari) */
-
 }
-
-
 
 /* pour minuteur */
 
@@ -61,31 +54,29 @@ button {
   display: inline-block;
   padding: 4px;
   cursor: pointer;
-
 }
 .up {
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
-  background-color:rgb(192, 192, 204);
+  background-color: rgb(192, 192, 204);
 }
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  background-color:rgb(192, 192, 204)
+  background-color: rgb(192, 192, 204);
 }
 #timer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 13rem;
-    background-color: rgb(192, 192, 204);
-    border-radius: 5px;
-    padding: 5px;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 13rem;
+  background-color: rgb(192, 192, 204);
+  border-radius: 5px;
+  padding: 5px;
 }
 .Arrow {
-    display: grid;
+  display: grid;
 }
 
 #startButton {
@@ -97,4 +88,3 @@ button {
 #startButton:hover {
   background-color: palevioletred;
 }
-
