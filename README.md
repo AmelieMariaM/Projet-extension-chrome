@@ -7,6 +7,14 @@ and provides soothing content through pictures of cute animals and calming songs
 
 ## Requirements
 
+Clone this repository: git clone git@github.com:AmelieMariaM/Projet-extension-chrome.git
+
+Open Google Chrome and navigate to chrome://extensions.
+
+Enable "Developer mode" by toggling the switch at the top right corner.
+
+Click on "Load unpacked" and select the cloned repository folder.
+
 ## Technologies
 
 ## Contributors

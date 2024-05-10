@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     "cute5.jpg",
     "cute6.jpg",
     "cute7.jpg",
+    "cute8.jpg",
+    "cute9.jpg",
+    "cute10.jpg",
   ];
 
   const imageContainer = document.getElementById("imageContainer");
@@ -71,11 +74,11 @@ const affirmations = [
 document.addEventListener("DOMContentLoaded", function () {
   const randomIndex = Math.floor(Math.random() * affirmations.length);
 
-  const citationContainer = document.getElementById("citationContainer");
+  const quoteContainer = document.getElementById("quoteContainer");
 
-  const citation = affirmations[randomIndex];
+  const quote = affirmations[randomIndex];
 
-  citationContainer.textContent = citation;
+  quoteContainer.textContent = quote;
 });
 
 //pour minuteur
@@ -151,19 +154,52 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const songLibrary = [
-    "songs/song1.mp3",
-    "songs/song2.mp3",
-    "songs/song3.mp3",
-    "songs/song4.mp3",
-    "songs/song5.mp3",
+    {
+      name: "Un petit caillou",
+      artist: "Emilie Jolie",
+      songPath: "songs/song1.mp3",
+    },
+    { name: "Time", artist: "Hanz Zimmer", songPath: "songs/song2.mp3" },
+    {
+      name: "Banana Pancakes",
+      artist: "Jack Johnson",
+      songPath: "songs/song3.mp3",
+    },
+    {
+      name: "Enjoy the Silence",
+      artist: "Moriarty(cover)",
+      songPath: "songs/song4.mp3",
+    },
+    { name: "Sunrise", artist: "Norah Jones", songPath: "songs/song5.mp3" },
+    {
+      name: "What you won't do for love",
+      artist: "Bobby Caldwell",
+      songPath: "songs/song6.mp3",
+    },
+    {
+      name: "Before the Bridge",
+      artist: "Future Islands",
+      songPath: "songs/song7.mp3",
+    },
+    { name: "Titre 8", artist: "Artiste 8", songPath: "songs/song8.mp3" },
+    { name: "Titre 9", artist: "Artiste 9", songPath: "songs/song9.mp3" },
+    { name: "Titre 10", artist: "Artiste 10", songPath: "songs/song10.mp3" },
+    { name: "Titre 11", artist: "Artiste 11", songPath: "songs/song11.mp3" },
   ];
-  const audioPlayer = document.getElementById("myAudio");
 
-  const randomIndex = Math.floor(Math.random() * songLibrary.length);
+  const loadRandomSong = () => {
+    const songIndex = Math.floor(Math.random() * songLibrary.length);
+    const song = songLibrary[songIndex];
+    const audioPlayer = document.getElementById("myAudio");
 
-  const songPath = songLibrary[randomIndex];
+    const songInfo = document.querySelector(".song-info");
+    songInfo.innerHTML = "";
 
-  audioPlayer.src = songPath;
+    songInfo.innerHTML = song.name + ",\n" + song.artist;
 
-  audioPlayer.play();
+    audioPlayer.src = song.songPath;
+    audioPlayer.play();
+  };
+
+  loadRandomSong();
 });
