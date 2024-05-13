@@ -15,10 +15,10 @@ Enable "Developer mode" by toggling the switch at the top right corner.
 
 Click on "Load unpacked" and select the cloned repository folder.
 
-## Technologies
-
 ## Contributors
 
 Jessica Da Veiga
+
 Zachary Joriot
+
 Amélie Masson
